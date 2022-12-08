@@ -9,6 +9,6 @@ spec:
       create: true
   repositories:
     - name: satorepo1
-      url: ssh://git@github.com:SatoRihwa/cnapVerification
+      url: ssh://git@github.comSatoRihwa/cnapVerification
       branch: test
       path: ./
