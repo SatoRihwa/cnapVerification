@@ -1,0 +1,20 @@
+apiVersion: managed.msp.sbopsv/v1alpha1
+kind: Application
+metadata:
+  name: test2
+  namespace: namespace-sato
+spec:
+  chart:
+    name: basic-deployment
+    version: 0.7.x
+  settings:
+    image:
+      repository: rihwa/tanzu_create
+      pullPolicy: Always
+      tag: "latest"
+    service:
+      domain: www.tmcverificaton.de
+      ports:
+        - name: test2
+          containerPort: 80
+          servicePort: 80
