@@ -13,7 +13,7 @@ spec:
       pullPolicy: Always
       tag: "latest"
     service:
-      domain: www.tmcverificaton.de
+      domain: devtest.tmcverificaton.de
       ports:
         - name: test1
           containerPort: 80
