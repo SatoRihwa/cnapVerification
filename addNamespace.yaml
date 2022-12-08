@@ -1,0 +1,14 @@
+apiVersion: managed.msp.sbopsv/v1alpha1
+kind: UserConfig
+metadata:
+  name: uc
+  namespace: staging
+spec:
+  namespaces:
+    - name: namespace_sato
+      create: true
+  repositories:
+    - name: sato_repo1
+      url: ssh://git@github.com:SatoRihwa/cnapVerification.git
+      branch: test
+      path: ./
