@@ -1,0 +1,20 @@
+apiVersion: managed.msp.sbopsv/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: staging
+spec:
+  chart:
+    name: basic-deployment
+    version: 0.7.x
+  settings:
+    image:
+      repository: nginx
+      pullPolicy: Always
+      tag: "latest"
+    service:
+      domain: www.tmcverificaton.de
+      ports:
+        - name: nginx
+          containerPort: 80
+          servicePort: 80
