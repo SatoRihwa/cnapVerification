@@ -5,10 +5,10 @@ metadata:
   namespace: staging
 spec:
   namespaces:
-    - name: namespace_sato
+    - name: namespace-sato
       create: true
   repositories:
-    - name: satorepo1
+    - name: sato-repo1
       url: ssh://git@github.com:SatoRihwa/cnapVerification
       branch: test
       path: ./
