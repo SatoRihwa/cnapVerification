@@ -11,7 +11,7 @@ spec:
     databaseType: mysql
     instance:
     create: true
-    name: postgres-cnap-msp2207707
+    name: mysql-cnap-sample-instance
     location: eastus
     vmType: Standard_B1ms
     tier: Burstable
