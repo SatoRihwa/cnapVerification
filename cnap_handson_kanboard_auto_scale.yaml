@@ -13,7 +13,7 @@ spec:
       pullPolicy: IfNotPresent
       tag: "latest"
     service:
-      domain: kanboard.tmcverification.de
+      domain: kanboard.cnap.tmcverification.de
       ports:
         - name: kanbaord
           containerPort: 80
