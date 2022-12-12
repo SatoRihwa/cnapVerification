@@ -1,20 +1,20 @@
 apiVersion: managed.msp.sbopsv/v1alpha1
 kind: Application
 metadata:
-  name: postgres
+  name: mysql
   namespace: staging
 spec:
   chart:
     name: rdb
     version: 0.7.x
   settings:
-    databaseType: postgres
+    databaseType: mysql
     instance:
     create: true
     name: postgres-cnap-msp2207707
-    location: japaneast
-    vmType: Standard_D2s_v3
-    tier: GeneralPurpose
+    location: eastus
+    vmType: Standard_B1ms
+    tier: Burstable
   database:
     - name: staging-db
   users:
@@ -25,9 +25,13 @@ spec:
     resourceGroup:
       name: managed-cluster-rg
     databaseServer:
-      serverVersion: "13"
+      serverVersion: "8.0.21"
       createMode: Default
     firewallRules:
       - name: allow-azure-services
         startIpAddress: 0.0.0.0
-        endIpAddress: 0.0.0.0
+        endIpAddress: 255.255.255.255
+      vNetRule:
+        vNetResourceGroup: vnet-rg
+        vNetName: vnet01
+        subenetName: subnet01
