@@ -1,0 +1,26 @@
+apiVersion: managed.msp.sbopsv/v1alpha1
+kind: Application
+metadata:
+  name: kanboard
+  namespace: staging
+spec:
+  chart:
+    name: basic-deployment
+    version: 0.7.x
+  settings:
+    image:
+      repository: kanboard/kanboard
+      pullPolicy: IfNotPresent
+      tag: "latest"
+    service:
+      domain: kanboard2.cnap.tmcverification.de
+      ports:
+        - name: kanbaord2
+          containerPort: 80
+          servicePort: 80
+    replicaCount: 3
+    autoscaling:
+      enabled: true
+      minReplicas: 3
+      maxReplicas: 10
+      targetCPUUtilizationPercentage: 2
