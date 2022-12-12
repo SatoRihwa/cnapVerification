@@ -15,7 +15,7 @@ spec:
     service:
       domain: kanboard2.cnap.tmcverification.de
       ports:
-        - name: kanbaord
+        - name: kanbaord2
           containerPort: 80
           servicePort: 80
     replicaCount: 3
