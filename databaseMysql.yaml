@@ -34,4 +34,4 @@ spec:
       vNetRule:
         vNetResourceGroup: vnet-rg
         vNetName: vnet01
-        subenetName: subnet01
+        subnetName: subnet01
