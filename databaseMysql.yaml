@@ -28,10 +28,9 @@ spec:
         serverVersion: "8.0.21"
         createMode: Default
       firewallRules:
-        items:
-          - name: allow-azure-services
-            startIpAddress: 0.0.0.0
-            endIpAddress: 255.255.255.255
+        - name: allow-azure-services
+          startIpAddress: 0.0.0.0
+          endIpAddress: 255.255.255.255
       vNetRule:
         vNetResourceGroup: vnet-rg
         vNetName: vnet01
