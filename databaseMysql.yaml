@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     name: rdb
-    version: 0.7.x
+    version: 0.4.x
   settings:
     databaseType: mysql
     instance:
