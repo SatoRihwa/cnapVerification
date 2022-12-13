@@ -10,28 +10,29 @@ spec:
   settings:
     databaseType: mysql
     instance:
-    create: true
-    name: mysql-cnap-sample-instance
-    location: eastus
-    vmType: Standard_B1ms
-    tier: Burstable
-  database:
-    - name: staging-db
-  users:
-    - name: maintainer
-      secret:
-        key: satotest
-  azure:
-    resourceGroup:
-      name: managed-cluster-rg
-    databaseServer:
-      serverVersion: "8.0.21"
-      createMode: Default
-    firewallRules:
-      - name: allow-azure-services
-        startIpAddress: 0.0.0.0
-        endIpAddress: 255.255.255.255
-    vNetRule:
-      vNetResourceGroup: vnet-rg
-      vNetName: vnet01
-      subenetName: subnet01
+      create: true
+      name: mysql-cnap-sample-instance
+      location: eastus
+      vmType: Standard_B1ms
+      tier: Burstable
+    database:
+      - name: staging-db
+    users:
+      - name: maintainer
+        secret:
+          key: satotest
+    azure:
+      resourceGroup:
+        name: managed-cluster-rg
+      databaseServer:
+        serverVersion: "8.0.21"
+        createMode: Default
+      firewallRules:
+        items:
+          - name: allow-azure-services
+            startIpAddress: 0.0.0.0
+            endIpAddress: 255.255.255.255
+      vNetRule:
+        vNetResourceGroup: vnet-rg
+        vNetName: vnet01
+        subenetName: subnet01
