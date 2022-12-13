@@ -13,7 +13,7 @@ spec:
       pullPolicy: Always
       tag: "latest"
     service:
-      domain: devtest3.cnap.tmcverificaton.de
+      domain: devtest3.cnap.tmcverification.de
       ports:
         - name: test3
           containerPort: 80
