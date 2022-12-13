@@ -13,7 +13,7 @@ spec:
       pullPolicy: Always
       tag: "latest"
     service:
-      domain: www.cnap.tmcverification.de
+      domain: nginx.cnap.tmcverification.de
       ports:
         - name: nginx
           containerPort: 80
