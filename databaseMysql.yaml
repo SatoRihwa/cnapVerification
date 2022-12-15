@@ -32,6 +32,6 @@ spec:
           startIpAddress: 0.0.0.0
           endIpAddress: 255.255.255.255
       vNetRule:
-        vNetResourceGroup: vnet-rg
-        vNetName: vnet01
-        subnetName: subnet01
+        vNetResourceGroup: managed-cluster-rg
+        vNetName: aks-vnet-cnap
+        subnetName: default
