@@ -33,3 +33,5 @@ spec:
           endIpAddress: 255.255.255.255
       vNetRule:
         vNetResourceGroup: managed-cluster-rg
+        vNetName: aks-vent-cnap
+        subnetName: default
